@@ -4,6 +4,78 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
+    <header>
+        <h1 class="title">PSEU Team Members</h1>
+    </header>
+    <div class="main-content">
+        <div class="left-side">
+            <form action="new-member">
+                <b>Add new member</b>
+                <input class="wide" type="text" placeholder="Name">
+                <input class="wide" type="text" placeholder="Email">
+                <input class="wide" type="text" placeholder="Major">
+                <input class="wide" type="text" placeholder="Role">
+                <input class="wide" type="text" placeholder="Biography">
+                <input type="checkbox">Add to bottom / or at index <input type="text">
+                <button>Save</button>
+            </form>
+        </div>
+        <div class="rightside">
+            <div class="search-bar">
+                <div class="left">
+                    SortBy 
+
+                    <select name="sort-by" class="left-border">
+                        <option value="a-z">A-Z</option>
+                        <option value="z-a">Z-A</option>
+                        <option value="newest">Newest</option>
+                        <option value="oldest">Oldest</option>
+                    </select>
+
+                    <select name="major">
+                        <option value="Computer Science">Computer Science</option>
+                        <option value="Computer Engineering">Computer Engineering</option>
+                        <option value="Information Technology">Information Technology</option>
+                        <option value="Information System">Information System</option>
+                    </select>
+
+                    <select name="role" class="left-border">
+                        <option value="Front-End Developer">Front-End Developer</option>
+                        <option value="Back-End Developer">Back-End Developer</option>
+                        <option value="Full-Stack Developer">Full-Stack Developer</option>
+                        <option value="UI/UX Designer">UI/UX Designer</option>
+                    </select>
+
+                    <input type="text" placeholder="Search By Name ...">
+                </div>
+
+                <div class="right">
+                    <p id="n-items">15 ITEMS</p>
+                </div>
+            </div>
+
+            <div class="content">
+                <div class="element">
+                    <span>
+                        <img width="38" height="38" src="" alt="">
+                    </span>
+                    <span>
+                        <p class="name">Faris Abu3ram</p>
+                        <p class="inline email">faris@pseu.com</p>
+                        <p class="inline">/</p>
+                        <p class="inline major">Information Technology</p>
+                        <p class="inline">/</p>
+                        <p class="inline role">Front-End Developer</p>
+                        <p class="details">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some 
+                            form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure 
+                            there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the 
+                            first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem 
+                            Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+                        </p>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
