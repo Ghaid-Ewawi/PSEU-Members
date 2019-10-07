@@ -1,3 +1,16 @@
+// Initializing Color Variables
+$myBlue: #2D89E6;
+$myRed: #FF4A4A;
+$myGrey: #F6F6F6;
+$myBrown: #484848;
+
+@mixin applyFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: gr
+}
+
 * {
     padding: 0px;
     margin: 0px;
