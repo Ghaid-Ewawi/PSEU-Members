@@ -89,7 +89,32 @@ header {
         width: 66%;
         background: $myGrey;
         height: 100%;
-        padding: 30px 10px;
+
+        .search-bar {
+            color: white;
+            padding: 30px 0px;
+            display: flex;
+            justify-content: space-between;
+            width: 100%; 
+            .left {
+                background: $myBlue;
+                padding: 10px 20px;
+                border-radius: 0px 20px 20px 0px;
+                justify-content: flex-start;
+                * {
+                    width: 80px;
+                }
+            }
+            .right {
+                background: $myBlue;
+                justify-content: flex-end;
+                padding: 10px 20px;
+                border-radius: 20px 0px 0px 20px;
+    
+            }
+        }
+        
+
     }
 
 }
