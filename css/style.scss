@@ -3,6 +3,8 @@ $myBlue: #2D89E6;
 $myRed: #FF4A4A;
 $myGrey: #F6F6F6;
 $myBrown: #484848;
+$borderColor: #A2A2A2;
+
 $primary-font: "Segoe UI";
 
 @mixin applyFlex {
@@ -37,10 +39,35 @@ header {
     @include applyFlex();
     padding: 0px 8%;
     height: 93.5%;
-
+    
     .left-side {
+
+        .form {
+            padding: 15px;
+        }
+        form {
+            * {
+                margin-top: 10px;
+            }
+            .label {
+                text-align: center;
+                padding: 10px;
+                b {
+                    font-size: 18px;
+                    color: #707070;
+                }
+            }
+        }
+
+        border: 1px solid $borderColor;
+        margin-right: 20px;
+        border-radius: 15px;
         width: 33%;
         padding: 5px;
+        input.wide {
+            width: 100%;
+            padding: 17px;
+        }
     }
 
     .right-side {
