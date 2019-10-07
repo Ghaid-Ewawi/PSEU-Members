@@ -48,7 +48,7 @@ header h1 {
 }
 
 .main-content .left-side {
-  border: 1px solid #A2A2A2;
+  border: 1px solid #C3C3C3;
   margin-right: 20px;
   border-radius: 15px;
   width: 33%;
@@ -59,23 +59,41 @@ header h1 {
   padding: 15px;
 }
 
-.main-content .left-side form * {
-  margin-top: 10px;
+.main-content .left-side .form form * {
+  margin: 10px 0px;
 }
 
-.main-content .left-side form .label {
+.main-content .left-side .form form .label {
   text-align: center;
   padding: 10px;
 }
 
-.main-content .left-side form .label b {
+.main-content .left-side .form form .label b {
   font-size: 18px;
   color: #707070;
 }
 
-.main-content .left-side input.wide {
+.main-content .left-side .form form input.wide {
+  border: 1px solid #C3C3C3;
   width: 100%;
   padding: 17px;
+  border-radius: 10px;
+}
+
+.main-content .left-side .form form .small-input {
+  width: 55px;
+}
+
+.main-content .left-side button {
+  background: #2D89E6;
+  color: white;
+  font-size: 18px;
+  width: 100%;
+  display: block;
+  border: none;
+  border-radius: 0px 0px 15px 15px;
+  padding: 10px;
+  margin-top: 10px;
 }
 
 .main-content .right-side {
