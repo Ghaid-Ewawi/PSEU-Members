@@ -52,7 +52,6 @@ header h1 {
   margin-right: 20px;
   border-radius: 15px;
   width: 33%;
-  padding: 5px;
 }
 
 .main-content .left-side .form {
@@ -81,7 +80,12 @@ header h1 {
 }
 
 .main-content .left-side .form form .small-input {
-  width: 55px;
+  width: 50px;
+  text-align: center;
+}
+
+.main-content .left-side .form form .checkbox {
+  font-size: 13px;
 }
 
 .main-content .left-side button {
