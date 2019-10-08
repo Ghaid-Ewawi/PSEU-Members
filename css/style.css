@@ -158,4 +158,65 @@ header h1 {
   padding: 10px 20px;
   border-radius: 20px 0px 0px 20px;
 }
+
+.main-content .right-side .content {
+  overflow-y: scroll;
+  height: 89%;
+}
+
+.main-content .right-side .content .element {
+  cursor: pointer;
+  height: 110px;
+  margin: 25px 0px;
+  overflow: hidden;
+  padding: 0px 15px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.main-content .right-side .content .element .img-span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  height: 100%;
+  width: 38px;
+}
+
+.main-content .right-side .content .element .img-span img {
+  border-radius: 50%;
+}
+
+.main-content .right-side .content .element p {
+  padding: 5px;
+}
+
+.main-content .right-side .content .element .inline {
+  display: inline;
+}
+
+.main-content .right-side .content .element .member-name {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.main-content .right-side .content .element .member-info {
+  font-weight: bold;
+  font-size: 14px;
+  color: #2D89E6;
+}
+
+.main-content .right-side .content .element .member-details {
+  font-size: 14px;
+  color: #6A6A6A;
+}
 /*# sourceMappingURL=style.css.map */

@@ -5,6 +5,7 @@ $myGrey: #F6F6F6;
 $myBrown: #484848;
 $borderColor: #C3C3C3;
 
+
 $primary-font: "Segoe UI";
 
 @mixin applyFlex {
@@ -132,7 +133,51 @@ header {
             }
         }
         
+        .content {
+            overflow-y: scroll;
+            height: 89%;
+            .element {
+                cursor: pointer;
+                height: 110px;
+                margin: 25px 0px;
+                overflow: hidden;
+                padding: 0px 15px;
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                align-content: center;
 
+                .img-span {
+                    img {
+                        border-radius: 50%;
+                    }
+                    display: flex;
+                    align-content: center;
+                    height: 100%;
+                    width: 38px;
+                }
+                p {
+                    padding: 5px;
+                }
+                .inline {
+                    display: inline;
+                }
+                .member-name {
+                    font-weight: bold;
+                    font-size: 20px;
+                }
+                .member-info {
+                    font-weight: bold;
+                    font-size: 14px;
+                    color: $myBlue;
+                }
+                .member-details {
+                    font-size: 14px;
+                    color: #6A6A6A;
+                }
+                
+            }
+        }
     }
 
 }
