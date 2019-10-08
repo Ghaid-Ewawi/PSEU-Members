@@ -29,32 +29,36 @@
         <div class="right-side">
             <div class="search-bar">
                 <div class="left">
+                    <span>
+                        
+                        <p>SORT BY</p>
+                        <select name="sort-by" class="left-border">
+                            <option value="a-z">A-Z</option>
+                            <option value="z-a">Z-A</option>
+                            <option value="newest">Newest</option>
+                            <option value="oldest">Oldest</option>
+                        </select>
+                    </span>
+                    <span class="middle-borders">
+                        <select name="major">
+                            <option value="" disabled selected>Major</option>
+                            <option value="Computer Science">Computer Science</option>
+                            <option value="Computer Engineering">Computer Engineering</option>
+                            <option value="Information Technology">Information Technology</option>
+                            <option value="Information System">Information System</option>
+                        </select>
                     
-                    Sort By 
-                    <select name="sort-by" class="left-border">
-                        <option value="a-z">A-Z</option>
-                        <option value="z-a">Z-A</option>
-                        <option value="newest">Newest</option>
-                        <option value="oldest">Oldest</option>
-                    </select>
-
-                    <select name="major">
-                        <option value="" disabled selected>Major</option>
-                        <option value="Computer Science">Computer Science</option>
-                        <option value="Computer Engineering">Computer Engineering</option>
-                        <option value="Information Technology">Information Technology</option>
-                        <option value="Information System">Information System</option>
-                    </select>
-
-                    <select name="role" class="left-border">
-                        <option value="" disabled selected>Role</option>
-                        <option value="Front-End Developer">Front-End Developer</option>
-                        <option value="Back-End Developer">Back-End Developer</option>
-                        <option value="Full-Stack Developer">Full-Stack Developer</option>
-                        <option value="UI/UX Designer">UI/UX Designer</option>
-                    </select>
-
-                    <input type="text" placeholder="Search By Name ...">
+                        <select name="role" class="left-border">
+                            <option value="" disabled selected>Role</option>
+                            <option value="Front-End Developer">Front-End Developer</option>
+                            <option value="Back-End Developer">Back-End Developer</option>
+                            <option value="Full-Stack Developer">Full-Stack Developer</option>
+                            <option value="UI/UX Designer">UI/UX Designer</option>
+                        </select>
+                    </span>
+                    <span>
+                        <input type="text" placeholder="Search By Name ...">
+                    </span>
                 </div>
 
                 <div class="right">

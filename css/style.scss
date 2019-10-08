@@ -95,25 +95,40 @@ header {
 
         .search-bar {
             color: white;
-            padding: 30px 0px;
+            padding: 40px 0px 0px 0px;
             display: flex;
             justify-content: space-between;
             width: 100%; 
             .left {
+                * {
+                    display: inline;
+                    font-size: 12px;
+                    border-radius: 3px;
+                    border: none;
+                    padding: 2px;
+                }
+                display: flex;
+                width: 75%;
                 background: $myBlue;
                 padding: 10px 20px;
                 border-radius: 0px 20px 20px 0px;
-                justify-content: flex-start;
-                * {
-                    width: 80px;
+                justify-content: center;
+                span {
+                    padding: 0px 15px;
+                    select {
+                        width: 60px;
+                    }
+                }
+                .middle-borders {
+                    border-radius: 0px;
+                    border-left: 1px solid white;
+                    border-right: 1px solid white;
                 }
             }
             .right {
                 background: $myBlue;
-                justify-content: flex-end;
                 padding: 10px 20px;
                 border-radius: 20px 0px 0px 20px;
-    
             }
         }
         
