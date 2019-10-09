@@ -186,6 +186,13 @@ header h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: flex;
   -ms-flex-line-pack: center;
       align-content: center;
   height: 100%;
@@ -194,6 +201,10 @@ header h1 {
 
 .main-content .right-side .content .element .img-span img {
   border-radius: 50%;
+}
+
+.main-content .right-side .content .element .text-span {
+  padding-left: 10px;
 }
 
 .main-content .right-side .content .element p {

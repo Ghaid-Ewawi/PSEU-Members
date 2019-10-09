@@ -148,6 +148,7 @@ header {
                 align-content: center;
 
                 .img-span {
+                    @include applyFlex();
                     img {
                         border-radius: 50%;
                     }
@@ -155,6 +156,9 @@ header {
                     align-content: center;
                     height: 100%;
                     width: 38px;
+                }
+                .text-span {
+                    padding-left: 10px;
                 }
                 p {
                     padding: 5px;
