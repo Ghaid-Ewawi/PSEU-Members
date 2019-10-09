@@ -8,10 +8,6 @@
 
 html, body {
   height: 100%;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
 }
 
 header {
@@ -93,11 +89,9 @@ header h1 {
   color: white;
   font-size: 18px;
   width: 100%;
-  display: block;
   border: none;
   border-radius: 0px 0px 15px 15px;
   padding: 10px;
-  margin-top: 10px;
 }
 
 .main-content .right-side {
@@ -107,15 +101,15 @@ header h1 {
 }
 
 .main-content .right-side .search-bar {
+  width: 100%;
   color: white;
-  padding: 40px 0px 0px 0px;
+  padding-top: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 100%;
 }
 
 .main-content .right-side .search-bar .left {
@@ -160,17 +154,17 @@ header h1 {
 }
 
 .main-content .right-side .content {
-  overflow-y: scroll;
   height: 89%;
+  overflow-y: scroll;
 }
 
 .main-content .right-side .content .element {
-  cursor: pointer;
+  width: 100%;
   height: 110px;
   margin: 25px 0px;
-  overflow: hidden;
   padding: 0px 15px;
-  width: 100%;
+  cursor: pointer;
+  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -183,6 +177,8 @@ header h1 {
 }
 
 .main-content .right-side .content .element .img-span {
+  height: 100%;
+  width: 38px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -192,11 +188,6 @@ header h1 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  display: flex;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  height: 100%;
-  width: 38px;
 }
 
 .main-content .right-side .content .element .img-span img {
@@ -207,26 +198,26 @@ header h1 {
   padding-left: 10px;
 }
 
-.main-content .right-side .content .element p {
+.main-content .right-side .content .element .text-span p {
   padding: 5px;
 }
 
-.main-content .right-side .content .element .inline {
+.main-content .right-side .content .element .text-span .inline {
   display: inline;
 }
 
-.main-content .right-side .content .element .member-name {
+.main-content .right-side .content .element .text-span .member-name {
   font-weight: bold;
   font-size: 20px;
 }
 
-.main-content .right-side .content .element .member-info {
+.main-content .right-side .content .element .text-span .member-info {
   font-weight: bold;
   font-size: 14px;
   color: #2D89E6;
 }
 
-.main-content .right-side .content .element .member-details {
+.main-content .right-side .content .element .text-span .member-details {
   font-size: 14px;
   color: #6A6A6A;
 }
