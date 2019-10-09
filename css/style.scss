@@ -50,7 +50,7 @@ header {
             padding: 15px;
             form {
                 * {
-                    margin: 10px 0px;
+                    margin: 5px 0px;
                 }
                 .label {
                     text-align: center;
@@ -60,7 +60,7 @@ header {
                         color: #707070;
                     }
                 }
-                input.wide {
+                .wide {
                     border: 1px solid $borderColor;
                     width: 100%;
                     padding: 17px;

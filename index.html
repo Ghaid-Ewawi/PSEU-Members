@@ -16,9 +16,24 @@
                     </div>
                     <input class="wide" type="text" placeholder="Name">
                     <input class="wide" type="text" placeholder="Email">
-                    <input class="wide" type="text" placeholder="Major">
-                    <input class="wide" type="text" placeholder="Role">
-                    <input class="wide" type="text" placeholder="Biography">
+
+                    <select class="wide" name="major">
+                        <option value="" disabled selected>Major</option>
+                        <option value="Computer Science">Computer Science</option>
+                        <option value="Computer Engineering">Computer Engineering</option>
+                        <option value="Information Technology">Information Technology</option>
+                        <option value="Information System">Information System</option>
+                    </select>
+                    <select class="wide" name="role" class="left-border">
+                        <option value="" disabled selected>Role</option>
+                        <option value="Front-End Developer">Front-End Developer</option>
+                        <option value="Back-End Developer">Back-End Developer</option>
+                        <option value="Full-Stack Developer">Full-Stack Developer</option>
+                        <option value="UI/UX Designer">UI/UX Designer</option>
+                    </select>
+                    
+                    <textarea class="wide" rows="4" cols="50" maxlength="1500" minlength="500" placeholder="Biography"></textarea>
+                    
                     <div class="checkbox">
                         <input type="checkbox"> Add to bottom / or at index <input class="small-input" type="text">                        
                     </div>
@@ -30,7 +45,6 @@
             <div class="search-bar">
                 <div class="left">
                     <span>
-                        
                         <p>SORT BY</p>
                         <select name="sort-by" class="left-border">
                             <option value="a-z">A-Z</option>
