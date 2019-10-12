@@ -2,6 +2,7 @@
 <head>
     <title>PSEU</title>
     <link rel="stylesheet" href="css/style.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
     <header>
@@ -14,8 +15,8 @@
                     <div class="label">
                         <b>Add new member</b>
                     </div>
-                    <input class="wide" type="text" placeholder="Name">
-                    <input class="wide" type="text" placeholder="Email">
+                    <input name="name" class="wide" type="text" placeholder="Name">
+                    <input name="email" class="wide" type="text" placeholder="Email">
 
                     <select class="wide" name="major">
                         <option value="" disabled selected>Major</option>
@@ -32,14 +33,14 @@
                         <option value="UI/UX Designer">UI/UX Designer</option>
                     </select>
                     
-                    <textarea class="wide" rows="4" cols="50" maxlength="1500" minlength="500" placeholder="Biography"></textarea>
+                    <textarea name="biography" class="wide" rows="4" cols="50" maxlength="1500" minlength="500" placeholder="Biography"></textarea>
                     
                     <div class="checkbox">
-                        <input type="checkbox"> Add to bottom / or at index <input class="small-input" type="text">                        
+                        <input name="isIndex" type="checkbox"> Add to bottom / or at index <input name="index" class="small-input" type="text">                        
                     </div>
                 </form>
             </div>
-            <button>Save</button>
+            <button id="add-member-btn">Save</button>
         </div>
         <div class="right-side">
             <div class="search-bar">
@@ -76,7 +77,7 @@
                 </div>
 
                 <div class="right">
-                    <p id="n-items">15 ITEMS</p>
+                    <p id="members-count">15 ITEMS</p>
                 </div>
             </div>
 
