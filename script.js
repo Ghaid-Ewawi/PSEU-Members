@@ -42,19 +42,15 @@ let membersList = [{
 }]
 
 membersList.forEach(member => {
-
     let elementData  = memberTemplate.content.querySelector('.element');
-    console.log(elementData)
-    let currentMember = elementData.cloneNode(true)
-    currentMember.querySelector('.member-name').innerText = member.name;
+    let currentMember = elementData.cloneNode(true);
+    currentMember.querySelector('.member-name>.name').innerText = member.name;
     currentMember.querySelector('.email').innerText = member.email;
     currentMember.querySelector('.major').innerText = member.major;
     currentMember.querySelector('.role').innerText = member.role;
     currentMember.querySelector('.member-details').innerText = member.biography;
-    console.log(currentMember);
     membersContainer.appendChild(currentMember);
-    console.log(elementData)
-    console.log(member.name);
 })
 
+addMemberButton.addEventListener()
 
