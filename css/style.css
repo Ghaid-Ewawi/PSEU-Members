@@ -153,12 +153,12 @@ header h1 {
   border-radius: 20px 0px 0px 20px;
 }
 
-.main-content .right-side .content {
+.main-content .right-side #content {
   height: 89%;
   overflow-y: scroll;
 }
 
-.main-content .right-side .content .element {
+.main-content .right-side #content .element {
   width: 100%;
   height: 100px;
   margin: 25px 0px;
@@ -176,7 +176,7 @@ header h1 {
       align-content: center;
 }
 
-.main-content .right-side .content .element .img-span {
+.main-content .right-side #content .element .img-span {
   height: 100%;
   width: 38px;
   display: -webkit-box;
@@ -190,34 +190,34 @@ header h1 {
           align-items: center;
 }
 
-.main-content .right-side .content .element .img-span img {
+.main-content .right-side #content .element .img-span img {
   border-radius: 50%;
 }
 
-.main-content .right-side .content .element .text-span {
+.main-content .right-side #content .element .text-span {
   padding-left: 10px;
 }
 
-.main-content .right-side .content .element .text-span p {
+.main-content .right-side #content .element .text-span p {
   padding: 5px;
 }
 
-.main-content .right-side .content .element .text-span .inline {
+.main-content .right-side #content .element .text-span .inline {
   display: inline;
 }
 
-.main-content .right-side .content .element .text-span .member-name {
+.main-content .right-side #content .element .text-span .member-name {
   font-weight: bold;
   font-size: 20px;
 }
 
-.main-content .right-side .content .element .text-span .member-info {
+.main-content .right-side #content .element .text-span .member-info {
   font-weight: bold;
   font-size: 14px;
   color: #2D89E6;
 }
 
-.main-content .right-side .content .element .text-span .member-details {
+.main-content .right-side #content .element .text-span .member-details {
   font-size: 14px;
   color: #6A6A6A;
 }
