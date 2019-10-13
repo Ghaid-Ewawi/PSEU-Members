@@ -8,8 +8,6 @@ const majorSelectList = document.querySelector('select[name=major]');
 const roleSelectList = document.querySelector('select[name=role]');
 const biographyInput = document.querySelector('textarea[name="biography"]');
 
-membersContainer.innerHTML = "";
-
 let membersList = [{
     name: "Faris Abu3ram",
     email: "faris@ppu.edu.ps",
@@ -25,8 +23,8 @@ let membersList = [{
     email: "ibrahim@ppu.edu.ps",
     major: "Information Technology",
     role: "Front-End Developer",
-    biography: `There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some 
-    form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure 
+    biography: `There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some` 
+    + `form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure 
     there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the 
     first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem 
     Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.`
@@ -42,22 +40,21 @@ let membersList = [{
     Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.`
 }]
 
-membersList.forEach(member => {
-    let elementData  = memberTemplate.content.querySelector('.element');
-    let currentMember = elementData.cloneNode(true);
-    currentMember.querySelector('.member-name>.name').innerText = member.name;
-    currentMember.querySelector('.email').innerText = member.email;
-    currentMember.querySelector('.major').innerText = member.major;
-    currentMember.querySelector('.role').innerText = member.role;
-    currentMember.querySelector('.member-details').innerText = member.biography;
-    membersContainer.appendChild(currentMember);
-})
+
+const LOCAL_STORAGE_LIST_KEY = 'members.list'
+membersList = JSON.parse(localStorage.getItem(LOCAL_STORAGE_LIST_KEY)) || [];
+
+renderHTMLPage();
 
 addMemberButton.addEventListener('click', e => {
     e.preventDefault();
     console.log(majorSelectList.value);
-    let validation = validateInput();
-    if(validation) console.log("worked :)");
+    let valid = validateInput();
+    if(valid) {
+        createMember(nameInput.value, emailInput.value, majorSelectList.value, roleSelectList.value, biographyInput.value);
+        save();
+        renderHTMLPage();
+    }
 })
 
 function validateInput() {
@@ -84,4 +81,33 @@ function validateInput() {
         return false;
     }
     return true;
+}
+
+function save() {
+    localStorage.setItem(LOCAL_STORAGE_LIST_KEY, JSON.stringify(membersList))
+}
+
+function createMember(name, email, major, role, biography) {
+    let member = {};
+    member.name = name;
+    member.email = email;
+    member.major = major;
+    member.role = role;
+    member.biography = biography;
+    membersList.unshift(member);
+}
+
+function renderHTMLPage() {
+    membersContainer.innerHTML = "";
+    membersList.forEach(member => {
+        let elementData  = memberTemplate.content.querySelector('.element');
+        let currentMember = elementData.cloneNode(true);
+        currentMember.querySelector('.member-name>.name').innerText = member.name;
+        currentMember.querySelector('.email').innerText = member.email;
+        currentMember.querySelector('.major').innerText = member.major;
+        currentMember.querySelector('.role').innerText = member.role;
+        currentMember.querySelector('.member-details').innerText = member.biography;
+        membersContainer.appendChild(currentMember);
+    })
+    
 }
