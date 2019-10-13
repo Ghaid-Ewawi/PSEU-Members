@@ -62,7 +62,7 @@
                             <option value="Information Technology">Information Technology</option>
                             <option value="Information System">Information System</option>
                         </select>
-                    
+                        
                         <select name="role" class="left-border">
                             <option value="" disabled selected>Role</option>
                             <option value="Front-End Developer">Front-End Developer</option>
@@ -75,12 +75,12 @@
                         <input type="text" placeholder="Search By Name ...">
                     </span>
                 </div>
-
+                
                 <div class="right">
                     <p id="members-count">15 ITEMS</p>
                 </div>
             </div>
-
+            
             <div id="content">
                 <div class="element">
                     <span class="img-span">
@@ -112,7 +112,7 @@
             </div>
         </div>
     </div>
-
+    
     <template id="member-templete">
         <div class="element">
             <span class="img-span">
@@ -135,6 +135,41 @@
                     <p class="member-details"></p>
                 </div>
             </span>
+        </div>
+    </template>
+    <template id="card-template">
+        <div class="full-details-card">
+            <div class="close">
+                <button>X</button>
+            </div>
+            <div class="name"></div>
+            <div class="job-info">
+                <p class="email inline"></p>
+                <p class="inline">/</p>
+                <select class="inline" name="major">
+                    <option value="" disabled selected>Major</option>
+                    <option value="Computer Science">Computer Science</option>
+                    <option value="Computer Engineering">Computer Engineering</option>
+                    <option value="Information Technology">Information Technology</option>
+                    <option value="Information System">Information System</option>
+                </select>
+                <p class="inline">/</p>
+                <select class="inline" name="role" class="left-border">
+                    <option value="" disabled selected>Role</option>
+                    <option value="Front-End Developer">Front-End Developer</option>
+                    <option value="Back-End Developer">Back-End Developer</option>
+                    <option value="Full-Stack Developer">Full-Stack Developer</option>
+                    <option value="UI/UX Designer">UI/UX Designer</option>
+                </select>
+            </div>
+            <div>
+                <p contenteditable="true" class="details"></p>
+            </div>
+            <div class="buttons">
+                <button id="del-btn">DELETE</button>
+                <button id="save-btn">SAVE</button>
+                <button id="cancel-btn">CANCEL</button>
+            </div>
         </div>
     </template>
 </body>

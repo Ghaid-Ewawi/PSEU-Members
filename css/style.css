@@ -221,4 +221,111 @@ header h1 {
   font-size: 14px;
   color: #6A6A6A;
 }
+
+.full-details-card {
+  padding: 150px 103px;
+  position: fixed;
+  top: 20%;
+  bottom: 20%;
+  left: 15%;
+  right: 15%;
+  border-radius: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: white;
+}
+
+.full-details-card .close {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50px;
+  height: 50px;
+  background: black;
+  border-radius: 50%;
+  position: absolute;
+  top: -20px;
+  left: -20px;
+}
+
+.full-details-card .close button {
+  border: none;
+  background: none;
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.full-details-card .name {
+  font-size: 70px;
+  font-weight: bold;
+  padding: 20px;
+}
+
+.full-details-card .job-info {
+  margin: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #2D89E6;
+}
+
+.full-details-card .job-info .inline {
+  padding: 0px 5px;
+  display: inline;
+}
+
+.full-details-card .job-info select {
+  border: 1px solid #C3C3C3;
+  color: #2D89E6;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.full-details-card .details {
+  font-size: 14px;
+}
+
+.full-details-card .buttons {
+  margin: 20px;
+}
+
+.full-details-card .buttons button {
+  font-size: 18px;
+  color: white;
+  padding: 5px;
+  margin: 20px;
+  width: 150px;
+  height: 45px;
+  border: none;
+}
+
+.full-details-card .buttons #del-btn {
+  background-color: #FF4A4A;
+}
+
+.full-details-card .buttons #save-btn {
+  background-color: #2D89E6;
+}
+
+.full-details-card .buttons #cancel-btn {
+  background-color: #484848;
+}
 /*# sourceMappingURL=style.css.map */
