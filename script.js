@@ -52,5 +52,26 @@ membersList.forEach(member => {
     membersContainer.appendChild(currentMember);
 })
 
-addMemberButton.addEventListener()
+addMemberButton.addEventListener('click', e => {
+    e.preventDefault();
+    console.log(majorSelectList.value);
+    let validation = validateInput();
+    if(validation) console.log("worked :)");
+})
 
+function validateInput() {
+    if(nameInput.value == "" || nameInput.value == null){
+        alert("Name must be filled out");
+        return false;
+    } else if(emailInput.value == "" || emailInput.value == null) {
+        alert("Email must be filled out");
+        return false;
+    } else if(majorSelectList.value == "" || majorSelectList.value == null) {
+        alert("You must pick the major");
+        return false;
+    } else if(roleSelectList.value == "" || roleSelectList.value == null) {
+        alert("You must pick the role");
+        return false;
+    }
+    return true;
+}
