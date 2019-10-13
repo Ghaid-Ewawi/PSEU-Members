@@ -6,6 +6,7 @@ const nameInput = document.querySelector('input[name="name"]');
 const emailInput = document.querySelector('input[name="email"');
 const majorSelectList = document.querySelector('select[name=major]');
 const roleSelectList = document.querySelector('select[name=role]');
+const biographyInput = document.querySelector('textarea[name="biography"]');
 
 membersContainer.innerHTML = "";
 
@@ -71,6 +72,15 @@ function validateInput() {
         return false;
     } else if(roleSelectList.value == "" || roleSelectList.value == null) {
         alert("You must pick the role");
+        return false;
+    } else if(biographyInput.value == "" || biographyInput.value == null) {
+        alert("You must enter your details");
+        return false;
+    } else if(biographyInput.value.length < 500){
+        alert("Your details must be longer than 500 characters. You have " + (500 - biographyInput.value.length) + " character left");
+        return false;
+    } else if(biographyInput.value.length > 1500){
+        alert("Your details must be less than 1500 characters. You have " + (biographyInput.value.length) + " characters");
         return false;
     }
     return true;
