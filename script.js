@@ -3,12 +3,12 @@ const membersCount = document.getElementById("members-count");
 const memberTemplate = document.getElementById('member-templete');
 const cardTemplate = document.getElementById('card-template');
 const membersContainer = document.getElementById('content');
+const documentBody = document.getElementById('body');
 const nameInput = document.querySelector('input[name="name"]');
 const emailInput = document.querySelector('input[name="email"');
 const majorSelectList = document.querySelector('select[name=major]');
 const roleSelectList = document.querySelector('select[name=role]');
 const biographyInput = document.querySelector('textarea[name="biography"]');
-const documentBody = document.getElementById('body');
 
 
 
@@ -53,14 +53,22 @@ renderHTMLPage();
 
 addMemberButton.addEventListener('click', e => {
     e.preventDefault();
-    console.log(majorSelectList.value);
     let valid = validateInput();
     if(valid) {
         createMember(nameInput.value, emailInput.value, majorSelectList.value, roleSelectList.value, biographyInput.value);
         save();
         renderHTMLPage();
+        clearForm();
     }
 })
+
+function clearForm() {
+    nameInput.value = "";
+    emailInput.value = "";
+    majorSelectList.value = "Major";
+    roleSelectList.value = "Role";
+    biographyInput.value = "";
+}
 
 function validateInput() {
     if(nameInput.value == "" || nameInput.value == null){
