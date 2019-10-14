@@ -123,7 +123,7 @@ function renderHTMLPage() {
         currentMember.querySelector('.member-details').innerText = member.biography;
 
         currentMember.addEventListener('click', event => {
-            let cardData  = cardTemplate.content.querySelector('.full-details-card');
+            let cardData  = cardTemplate.content.querySelector('.cardContainer');
             let currentCard = cardData.cloneNode(true);
             currentCard = createCard(currentCard, member.name, member.email, member.major, member.role, member.biography);
         })
@@ -139,13 +139,13 @@ function createCard(htmlData, name, email, major, role, biography) {
     htmlData.querySelector('select[name="role"]').value = role;
     htmlData.querySelector('.details').innerText = biography;
     addFunctionality(htmlData);
-    documentBody.appendChild(htmlData);
+    documentBody.prepend(htmlData);
 }
 
 function addFunctionality(card) {
     let closeBtn = card.querySelector('.close>button');
     closeBtn.addEventListener('click', event => {
-        documentBody.removeChild(document.querySelector('.full-details-card'));
+        documentBody.removeChild(document.querySelector('.cardContainer'));
     })
     let deleteBtn = card.querySelector('.buttons>#del-btn');
     let saveBtn = card.querySelector('.buttons>#save-btn');
@@ -155,7 +155,7 @@ function addFunctionality(card) {
         for(var i = 0; i < membersList.length; i++){
             if(membersList[i].email === card.querySelector('.email').innerText) {
                 membersList.splice(i, 1);
-                documentBody.removeChild(document.querySelector('.full-details-card'));
+                documentBody.removeChild(document.querySelector('.cardContainer'));
             }
         }
         save();
@@ -168,7 +168,7 @@ function addFunctionality(card) {
                 membersList[i].major = card.querySelector('select[name="major"]').value;
                 membersList[i].role = card.querySelector('select[name="role"]').value;
                 membersList[i].biography = card.querySelector('.details').innerText;
-                documentBody.removeChild(document.querySelector('.full-details-card'));
+                documentBody.removeChild(document.querySelector('.cardContainer'));
                 save();
                 renderHTMLPage();
             }
@@ -176,6 +176,6 @@ function addFunctionality(card) {
     })
 
     cancelBtn.addEventListener('click', event => {
-        documentBody.removeChild(document.querySelector('.full-details-card'));
+        documentBody.removeChild(document.querySelector('.cardContainer'));
     })
 }
