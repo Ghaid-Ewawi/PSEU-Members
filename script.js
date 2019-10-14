@@ -92,6 +92,16 @@ function validateInput() {
     } else if(biographyInput.value.length > 1500){
         alert("Your details must be less than 1500 characters. You have " + (biographyInput.value.length) + " characters");
         return false;
+    } else if(!validateEmail(emailInput.value)) {
+        alert("This email already exists");
+        return false;
+    }
+    return true;
+}
+
+function validateEmail(email){
+    for(var i = 0; i < membersList.length; i++){
+        if(membersList[i].email == email) return false;
     }
     return true;
 }
