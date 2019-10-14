@@ -65,8 +65,8 @@ addMemberButton.addEventListener('click', e => {
 function clearForm() {
     nameInput.value = "";
     emailInput.value = "";
-    majorSelectList.value = "Major";
-    roleSelectList.value = "Role";
+    majorSelectList.value = "";
+    roleSelectList.value = "";
     biographyInput.value = "";
 }
 
@@ -112,6 +112,7 @@ function createMember(name, email, major, role, biography) {
 
 function renderHTMLPage() {
     membersContainer.innerHTML = "";
+    membersCount.innerText = membersList.length + " ITEMS";
     membersList.forEach(member => {
         let elementData  = memberTemplate.content.querySelector('.element');
         let currentMember = elementData.cloneNode(true);
@@ -128,7 +129,7 @@ function renderHTMLPage() {
         })
 
         membersContainer.appendChild(currentMember);
-    })   
+    })
 }
 
 function createCard(htmlData, name, email, major, role, biography) {
