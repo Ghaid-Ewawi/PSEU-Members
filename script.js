@@ -1,6 +1,7 @@
 const addMemberButton = document.getElementById("add-member-btn");
 const membersCount = document.getElementById("members-count");
 const memberTemplate = document.getElementById('member-templete');
+const cardTemplate = document.getElementById('card-template');
 const membersContainer = document.getElementById('content');
 const nameInput = document.querySelector('input[name="name"]');
 const emailInput = document.querySelector('input[name="email"');
@@ -8,6 +9,9 @@ const majorSelectList = document.querySelector('select[name=major]');
 const roleSelectList = document.querySelector('select[name=role]');
 const biographyInput = document.querySelector('textarea[name="biography"]');
 
+
+
+//This list is here to have some data to begin with.
 let membersList = [{
     name: "Faris Abu3ram",
     email: "faris@ppu.edu.ps",
@@ -42,7 +46,7 @@ let membersList = [{
 
 
 const LOCAL_STORAGE_LIST_KEY = 'members.list'
-membersList = JSON.parse(localStorage.getItem(LOCAL_STORAGE_LIST_KEY)) || [];
+membersList = JSON.parse(localStorage.getItem(LOCAL_STORAGE_LIST_KEY)) || membersList;
 
 renderHTMLPage();
 
@@ -107,7 +111,22 @@ function renderHTMLPage() {
         currentMember.querySelector('.major').innerText = member.major;
         currentMember.querySelector('.role').innerText = member.role;
         currentMember.querySelector('.member-details').innerText = member.biography;
+
+        currentMember.addEventListener('click', event => {
+            let cardData  = cardTemplate.content.querySelector('.full-details-card');
+            let currentCard = cardData.cloneNode(true);
+            currentCard = createCard(currentCard, member.name, member.email, member.major, member.role, member.biography);
+        })
+
         membersContainer.appendChild(currentMember);
-    })
-    
+    })   
+}
+
+function createCard(htmlData, name, email, major, role, biography) {
+    htmlData.querySelector('.name').innerText = name;
+    htmlData.querySelector('.email').innerText = email;
+    htmlData.querySelector('select[name="major"]').value = major;    
+    htmlData.querySelector('select[name="role"]').value = role;
+    htmlData.querySelector('.details').innerText = biography;
+    document.getElementById('body').appendChild(htmlData);
 }
