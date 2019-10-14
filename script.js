@@ -161,6 +161,19 @@ function addFunctionality(card) {
         renderHTMLPage();
     })
 
+    saveBtn.addEventListener('click', event => {
+        for(var i = 0; i < membersList.length; i++){
+            if(membersList[i].email === card.querySelector('.email').innerText) {
+                membersList[i].major = card.querySelector('select[name="major"]').value;
+                membersList[i].role = card.querySelector('select[name="role"]').value;
+                membersList[i].biography = card.querySelector('.details').innerText;
+                documentBody.removeChild(document.querySelector('.full-details-card'));
+                save();
+                renderHTMLPage();
+            }
+        }
+    })
+
     cancelBtn.addEventListener('click', event => {
         documentBody.removeChild(document.querySelector('.full-details-card'));
     })
