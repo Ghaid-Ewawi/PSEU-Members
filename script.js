@@ -8,6 +8,7 @@ const emailInput = document.querySelector('input[name="email"');
 const majorSelectList = document.querySelector('select[name=major]');
 const roleSelectList = document.querySelector('select[name=role]');
 const biographyInput = document.querySelector('textarea[name="biography"]');
+const documentBody = document.getElementById('body');
 
 
 
@@ -128,5 +129,31 @@ function createCard(htmlData, name, email, major, role, biography) {
     htmlData.querySelector('select[name="major"]').value = major;    
     htmlData.querySelector('select[name="role"]').value = role;
     htmlData.querySelector('.details').innerText = biography;
-    document.getElementById('body').appendChild(htmlData);
+    addFunctionality(htmlData);
+    documentBody.appendChild(htmlData);
+}
+
+function addFunctionality(card) {
+    let closeBtn = card.querySelector('.close>button');
+    closeBtn.addEventListener('click', event => {
+        documentBody.removeChild(document.querySelector('.full-details-card'));
+    })
+    let deleteBtn = card.querySelector('.buttons>#del-btn');
+    let saveBtn = card.querySelector('.buttons>#save-btn');
+    let cancelBtn = card.querySelector('.buttons>#cancel-btn');
+
+    deleteBtn.addEventListener('click', event => {
+        for(var i = 0; i < membersList.length; i++){
+            if(membersList[i].email === card.querySelector('.email').innerText) {
+                membersList.splice(i, 1);
+                documentBody.removeChild(document.querySelector('.full-details-card'));
+            }
+        }
+        save();
+        renderHTMLPage();
+    })
+
+    cancelBtn.addEventListener('click', event => {
+        documentBody.removeChild(document.querySelector('.full-details-card'));
+    })
 }
